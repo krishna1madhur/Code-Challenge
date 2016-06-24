@@ -3,7 +3,7 @@
 * Date: 04/07/2016
 * Language and IDE used- Java, Eclipse
 */
-The application/project is developed specific to the problem statement defined in 'Problem Statement.txt' file. 
+The project is developed specific to the problem statement defined in 'Problem Statement.txt' file. 
 
 Instructions to run the Project:
 1. Open the Eclipse(or NetBeans) IDE and import the archive file as a new project
