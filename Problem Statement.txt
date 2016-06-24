@@ -1,0 +1,70 @@
+Application should allow a client to access student information in a database.  The “database” will be in a FILE.  Data in the file shall be in the following CSV format:
+Class, Professor, Student ID
+ 
+Class = History, Chemistry, Physics, Mathematics [ONLY 4 types]
+Professor = “a string”
+Student ID = “an integer”
+ 
+The application shall be used to retrieve the following information:
+1. The list of class sections being taught (I.e., unique Class/Professor pairs)
+2. The list of classes being taken by each student
+3. The list of Professors with at least 2 classes with 2 or more of the same students
+4. How many students are registered for each Class?  List them.
+5. How many students take more than one Class?  List them.
+6. How many professors teach more than one Class?
+ 
+ 
+Additional Requirements:
+
+1. The "file" can be updated with new information (additions and/or deletions). 
+2. Unit tests should strive for 90% code coverage.
+3. Error handling should be present.
+ 
+ 
+Sample Data – CSV Format
+Chemistry, Joseph, 1234
+Chemistry, Jane, 3455
+History, Jane, 3455
+Mathematics, Doe, 56767
+Physics, Smith, 999
+Physics, Einstein, 2834
+History, Smith, 323
+History, Smith, 999
+Chemistry, Jane, 999
+Physics, Smith, 323
+Mathematics, Einstein, 3455
+ 
+ 
+Sample Answers
+Class Sections Taught:
+    Chemistry, Joseph
+    Chemistry, Jane
+    History, Jane
+    Mathematics, Doe
+    Physics, Smith
+    Physics, Einstein
+    History, Smith
+    Mathematics, Einstein
+ 
+Classes Taken By Each Student:
+    1234:  Chemistry
+    3455:  Chemistry, History, Mathematics
+    56767: Mathematics
+    999:   Physics, History, Chemistry
+    2834:  Physics
+    323:   History, Physics
+ 
+Professors with at least 2 classes with 2 or more of the same students:
+    Smith: Physics, History, 323, 999
+ 
+How many students are registered for each class?
+    Chemistry: 3
+    History: 3
+    Mathematics: 2
+    Physics: 3
+ 
+How many students take more than one class?
+    3: 3455, 999, 323
+ 
+How many professors teach more than one class?
+    3: Jane, Smith, Einstein
